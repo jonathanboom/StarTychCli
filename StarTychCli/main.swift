@@ -29,8 +29,8 @@ for i in 3 ..< CommandLine.arguments.count {
 }
 
 // TODO: Make full tych
-guard let finalImage = tych.makeStarTych() else {
-    print("Could make *tych")
+guard let finalImage = tych.makeImage() else {
+    print("Could not make *tych")
     exit(1)
 }
 
