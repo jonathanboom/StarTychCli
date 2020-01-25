@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		ABF7F98B23DCBFC300AB7E02 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7F98A23DCBFC300AB7E02 /* main.swift */; };
+		ABF7F9C623DCC75700AB7E02 /* StarTychCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABF7F9C523DCC75700AB7E02 /* StarTychCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		ABF7F98723DCBFC300AB7E02 /* StarTychCli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StarTychCli; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF7F98A23DCBFC300AB7E02 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		ABF7F99123DCC0E500AB7E02 /* StarTychCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StarTychCore; path = ../StarTychCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF7F9C623DCC75700AB7E02 /* StarTychCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +44,10 @@
 		ABF7F97E23DCBFC300AB7E02 = {
 			isa = PBXGroup;
 			children = (
+				ABF7F99123DCC0E500AB7E02 /* StarTychCore */,
 				ABF7F98923DCBFC300AB7E02 /* StarTychCli */,
 				ABF7F98823DCBFC300AB7E02 /* Products */,
+				ABF7F99323DCC12C00AB7E02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +67,13 @@
 			path = StarTychCli;
 			sourceTree = "<group>";
 		};
+		ABF7F99323DCC12C00AB7E02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +90,9 @@
 			dependencies = (
 			);
 			name = StarTychCli;
+			packageProductDependencies = (
+				ABF7F9C523DCC75700AB7E02 /* StarTychCore */,
+			);
 			productName = StarTychCli;
 			productReference = ABF7F98723DCBFC300AB7E02 /* StarTychCli */;
 			productType = "com.apple.product-type.tool";
@@ -284,6 +299,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ABF7F9C523DCC75700AB7E02 /* StarTychCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = StarTychCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABF7F97F23DCBFC300AB7E02 /* Project object */;
 }
