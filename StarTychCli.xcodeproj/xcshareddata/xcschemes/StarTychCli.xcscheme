@@ -56,19 +56,11 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "FF0000"
+            argument = "average"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/jonathan/Downloads/EOAUSn3X0AACtil.jpg"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "/Users/jonathan/Downloads/IMG_1261.jpeg"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "/Users/jonathan/Downloads/IMG_1280.jpeg"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
