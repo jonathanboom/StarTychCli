@@ -48,6 +48,31 @@ class StarTychCliTests: XCTestCase {
         }
         starTych = nil
     }
+    
+    func testCropNormal() {
+        starTych?.images[0].croppedFrame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        XCTAssertEqual(starTych?.images[0].croppedImage.width, 100)
+        XCTAssertEqual(starTych?.images[0].croppedImage.height, 100)
+    }
+    
+    func testCropOverlap() {
+        starTych!.images[0].croppedFrame = CGRect(x: 200, y: 100, width: 100000, height: 100000)
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.width - 200)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.height - 100)
+    }
+    
+    func testCropTooBig() {
+        starTych!.images[0].croppedFrame = CGRect(x: -100, y: -100, width: 100000, height: 100000)
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.width)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.height)
+    }
+    
+    func testCropNil() {
+        starTych!.images[0].croppedFrame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        starTych!.images[0].croppedFrame = nil
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.width)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.height)
+    }
 
     func testPerformanceMakeImage() {
         XCTAssertNotNil(starTych?.makeImage())
@@ -57,7 +82,10 @@ class StarTychCliTests: XCTestCase {
                     let borderWeight = Float(i) / 200.0
                     starTych?.outerBorderWeight = borderWeight
                     starTych?.innerBorderWeight = borderWeight
-                    XCTAssertNotNil(starTych?.makeImage(in: size))
+                    let image = starTych?.makeImage(in: size)
+                    XCTAssertNotNil(image)
+                    XCTAssertLessThanOrEqual(CGFloat(image!.width), size.width)
+                    XCTAssertLessThanOrEqual(CGFloat(image!.height), size.height)
                 }
             }
         }
