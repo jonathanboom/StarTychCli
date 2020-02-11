@@ -44,7 +44,7 @@ class StarTychCliTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         while starTych?.hasAnyImage ?? false {
-            starTych?.removeImage(index: 0)
+            starTych?.images = []
         }
         starTych = nil
     }

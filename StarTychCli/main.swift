@@ -40,7 +40,9 @@ let tych = StarTych(borderWeight: 0.04)
 for i in 3 ..< CommandLine.arguments.count {
     let inputUrl = URL(fileURLWithPath: CommandLine.arguments[i])
     if let image = ImageFileManager.createCGImage(from: inputUrl) {
-        tych.addImage(image)
+        let croppedImage = CroppableImage(image: image)
+        croppedImage.croppedFrame = CGRect(x: -100, y: -100, width: 600000, height: 600000)
+        tych.images.append(croppedImage)
     } else {
         print("Could not load image at \(inputUrl)")
     }
