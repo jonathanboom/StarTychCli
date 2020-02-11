@@ -8,7 +8,7 @@
 
 import Foundation
 import ImageFileManager
-import StarTych
+import StarTychCore
 
 func hexCodeToColor(_ hexCode: String) -> CGColor? {
     if hexCode.count != 6 {
@@ -58,7 +58,7 @@ if let color = hexCodeToColor(colorArg) {
     }
 }
 
-guard let finalImage = tych.makeImage() else {
+guard let finalImage = tych.makeImage(in: CGSize(width: 1242, height: 2688)) else {
     print("Could not make *tych")
     exit(1)
 }

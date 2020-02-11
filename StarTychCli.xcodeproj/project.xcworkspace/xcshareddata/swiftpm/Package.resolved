@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "StarTychCore",
+        "repositoryURL": "/Users/jonathan/Documents/Sources/StarTychCore",
+        "state": {
+          "branch": "feature/cropping",
+          "revision": "f94ea70a249aab9c7cfcf0eda99bb14a774114bf",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

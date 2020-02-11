@@ -52,7 +52,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/jonathan/Desktop/output.png"
+            argument = "/Users/jonathan/Desktop/output.jpg"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -60,7 +60,11 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "/Users/jonathan/Downloads/EOAUSn3X0AACtil.jpg"
+            argument = "/Users/jonathan/Downloads/IMG_1261.jpeg"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/jonathan/Downloads/IMG_1280.jpeg"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

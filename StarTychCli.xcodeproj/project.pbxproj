@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABE2F81023F1E4AC00DB608E /* StarTychCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABE2F80F23F1E4AC00DB608E /* StarTychCore */; };
+		ABE2F81823F1F1FB00DB608E /* StarTychCliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE2F81723F1F1FB00DB608E /* StarTychCliTests.swift */; };
+		ABE2F82123F1F44600DB608E /* StarTychCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABE2F82023F1F44600DB608E /* StarTychCore */; };
+		ABE2F82223F1F9B400DB608E /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE2F81D23F1F22200DB608E /* TestAssets.xcassets */; };
 		ABF7F98B23DCBFC300AB7E02 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7F98A23DCBFC300AB7E02 /* main.swift */; };
-		ABF7F9C623DCC75700AB7E02 /* StarTychCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABF7F9C523DCC75700AB7E02 /* StarTychCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,30 +27,58 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ABE2F81523F1F1FB00DB608E /* StarTychCliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarTychCliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE2F81723F1F1FB00DB608E /* StarTychCliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTychCliTests.swift; sourceTree = "<group>"; };
+		ABE2F81923F1F1FB00DB608E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABE2F81D23F1F22200DB608E /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
 		ABF7F98723DCBFC300AB7E02 /* StarTychCli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StarTychCli; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF7F98A23DCBFC300AB7E02 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		ABF7F99123DCC0E500AB7E02 /* StarTychCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = StarTychCore; path = ../StarTychCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		ABE2F81223F1F1FB00DB608E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE2F82123F1F44600DB608E /* StarTychCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABF7F98423DCBFC300AB7E02 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF7F9C623DCC75700AB7E02 /* StarTychCore in Frameworks */,
+				ABE2F81023F1E4AC00DB608E /* StarTychCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ABE2F81623F1F1FB00DB608E /* StarTychCliTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABE2F81723F1F1FB00DB608E /* StarTychCliTests.swift */,
+				ABE2F81D23F1F22200DB608E /* TestAssets.xcassets */,
+				ABE2F81923F1F1FB00DB608E /* Info.plist */,
+			);
+			path = StarTychCliTests;
+			sourceTree = "<group>";
+		};
+		ABE2F81F23F1F44600DB608E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ABF7F97E23DCBFC300AB7E02 = {
 			isa = PBXGroup;
 			children = (
-				ABF7F99123DCC0E500AB7E02 /* StarTychCore */,
 				ABF7F98923DCBFC300AB7E02 /* StarTychCli */,
+				ABE2F81623F1F1FB00DB608E /* StarTychCliTests */,
 				ABF7F98823DCBFC300AB7E02 /* Products */,
-				ABF7F99323DCC12C00AB7E02 /* Frameworks */,
+				ABE2F81F23F1F44600DB608E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				ABF7F98723DCBFC300AB7E02 /* StarTychCli */,
+				ABE2F81523F1F1FB00DB608E /* StarTychCliTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,16 +99,29 @@
 			path = StarTychCli;
 			sourceTree = "<group>";
 		};
-		ABF7F99323DCC12C00AB7E02 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		ABE2F81423F1F1FB00DB608E /* StarTychCliTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE2F81C23F1F1FB00DB608E /* Build configuration list for PBXNativeTarget "StarTychCliTests" */;
+			buildPhases = (
+				ABE2F81123F1F1FB00DB608E /* Sources */,
+				ABE2F81223F1F1FB00DB608E /* Frameworks */,
+				ABE2F81323F1F1FB00DB608E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarTychCliTests;
+			packageProductDependencies = (
+				ABE2F82023F1F44600DB608E /* StarTychCore */,
+			);
+			productName = StarTychCliTests;
+			productReference = ABE2F81523F1F1FB00DB608E /* StarTychCliTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ABF7F98623DCBFC300AB7E02 /* StarTychCli */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABF7F98E23DCBFC300AB7E02 /* Build configuration list for PBXNativeTarget "StarTychCli" */;
@@ -91,7 +136,7 @@
 			);
 			name = StarTychCli;
 			packageProductDependencies = (
-				ABF7F9C523DCC75700AB7E02 /* StarTychCore */,
+				ABE2F80F23F1E4AC00DB608E /* StarTychCore */,
 			);
 			productName = StarTychCli;
 			productReference = ABF7F98723DCBFC300AB7E02 /* StarTychCli */;
@@ -107,6 +152,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Intuitive Soup";
 				TargetAttributes = {
+					ABE2F81423F1F1FB00DB608E = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					ABF7F98623DCBFC300AB7E02 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -121,16 +169,39 @@
 				Base,
 			);
 			mainGroup = ABF7F97E23DCBFC300AB7E02;
+			packageReferences = (
+				ABE2F80E23F1E4AC00DB608E /* XCRemoteSwiftPackageReference "StarTychCore" */,
+			);
 			productRefGroup = ABF7F98823DCBFC300AB7E02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				ABF7F98623DCBFC300AB7E02 /* StarTychCli */,
+				ABE2F81423F1F1FB00DB608E /* StarTychCliTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		ABE2F81323F1F1FB00DB608E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE2F82223F1F9B400DB608E /* TestAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		ABE2F81123F1F1FB00DB608E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE2F81823F1F1FB00DB608E /* StarTychCliTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABF7F98323DCBFC300AB7E02 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +213,44 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		ABE2F81A23F1F1FB00DB608E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X8FWY2A5G5;
+				INFOPLIST_FILE = StarTychCliTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuitiveSoup.StarTychCliTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ABE2F81B23F1F1FB00DB608E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = X8FWY2A5G5;
+				INFOPLIST_FILE = StarTychCliTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = IntuitiveSoup.StarTychCliTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		ABF7F98C23DCBFC300AB7E02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -192,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -246,7 +355,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -280,6 +389,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		ABE2F81C23F1F1FB00DB608E /* Build configuration list for PBXNativeTarget "StarTychCliTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE2F81A23F1F1FB00DB608E /* Debug */,
+				ABE2F81B23F1F1FB00DB608E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ABF7F98223DCBFC300AB7E02 /* Build configuration list for PBXProject "StarTychCli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -300,9 +418,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		ABE2F80E23F1E4AC00DB608E /* XCRemoteSwiftPackageReference "StarTychCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "file:///Users/jonathan/Documents/Sources/StarTychCore";
+			requirement = {
+				branch = feature/cropping;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		ABF7F9C523DCC75700AB7E02 /* StarTychCore */ = {
+		ABE2F80F23F1E4AC00DB608E /* StarTychCore */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = ABE2F80E23F1E4AC00DB608E /* XCRemoteSwiftPackageReference "StarTychCore" */;
+			productName = StarTychCore;
+		};
+		ABE2F82023F1F44600DB608E /* StarTychCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ABE2F80E23F1E4AC00DB608E /* XCRemoteSwiftPackageReference "StarTychCore" */;
 			productName = StarTychCore;
 		};
 /* End XCSwiftPackageProductDependency section */
