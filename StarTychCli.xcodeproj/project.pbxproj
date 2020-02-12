@@ -423,7 +423,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "file:///Users/jonathan/Documents/Sources/StarTychCore";
 			requirement = {
-				branch = feature/cropping;
+				branch = master;
 				kind = branch;
 			};
 		};
