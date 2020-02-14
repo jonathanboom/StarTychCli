@@ -50,8 +50,8 @@ class StarTychCliTests: XCTestCase {
     }
     
     func testCropNormal() {
-        starTych?.images[0].croppedFrame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        XCTAssertEqual(starTych?.images[0].croppedImage.width, 100)
+        starTych?.images[0].croppedFrame = CGRect(x: 100, y: 100, width: 200, height: 100)
+        XCTAssertEqual(starTych?.images[0].croppedImage.width, 200)
         XCTAssertEqual(starTych?.images[0].croppedImage.height, 100)
     }
     
@@ -70,6 +70,48 @@ class StarTychCliTests: XCTestCase {
     func testCropNil() {
         starTych!.images[0].croppedFrame = CGRect(x: 100, y: 100, width: 100, height: 100)
         starTych!.images[0].croppedFrame = nil
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.width)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.height)
+    }
+    
+    func testCropAndRotation() {
+        starTych!.images[0].set(croppedFrame: CGRect(x: 100, y: 100, width: 200, height: 100), rotation: 90)
+        XCTAssertEqual(starTych?.images[0].croppedImage.width, 200)
+        XCTAssertEqual(starTych?.images[0].croppedImage.height, 100)
+    }
+    
+    func testRotation() {
+        starTych!.images[0].rotation = 90
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.height)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.width)
+        
+        starTych!.images[0].rotation = -90
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.height)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.width)
+        
+        starTych!.images[0].rotation = 180
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.width)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.height)
+        
+        starTych!.images[0].rotation = 360
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.width)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.height)
+    }
+    
+    func testRotationNonNinety() {
+        starTych!.images[0].rotation = 91
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.height)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.width)
+        
+        starTych!.images[0].rotation = -91
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.height)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.width)
+        
+        starTych!.images[0].rotation = 89
+        XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.width)
+        XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.height)
+        
+        starTych!.images[0].rotation = 355
         XCTAssertEqual(starTych!.images[0].croppedImage.width, starTych!.images[0].originalImage.width)
         XCTAssertEqual(starTych!.images[0].croppedImage.height, starTych!.images[0].originalImage.height)
     }
