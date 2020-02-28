@@ -7,8 +7,8 @@
 //
 
 import AppKit
-import XCTest
 import StarTychCore
+import XCTest
 
 class StarTychCliTests: XCTestCase {
     
@@ -125,6 +125,23 @@ class StarTychCliTests: XCTestCase {
                     starTych?.outerBorderWeight = borderWeight
                     starTych?.innerBorderWeight = borderWeight
                     let image = starTych?.makeImage(in: size)
+                    XCTAssertNotNil(image)
+                    XCTAssertLessThanOrEqual(CGFloat(image!.width), size.width)
+                    XCTAssertLessThanOrEqual(CGFloat(image!.height), size.height)
+                }
+            }
+        }
+    }
+    
+    func testPerformanceMakeImageNoInterpolation() {
+        XCTAssertNotNil(starTych?.makeImage())
+        measure {
+            for size in sizes {
+                for i in 1...50 {
+                    let borderWeight = Float(i) / 200.0
+                    starTych?.outerBorderWeight = borderWeight
+                    starTych?.innerBorderWeight = borderWeight
+                    let image = starTych?.makeImage(in: size, interpolationQuality: .none)
                     XCTAssertNotNil(image)
                     XCTAssertLessThanOrEqual(CGFloat(image!.width), size.width)
                     XCTAssertLessThanOrEqual(CGFloat(image!.height), size.height)
