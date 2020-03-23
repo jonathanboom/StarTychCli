@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ABE2F81023F1E4AC00DB608E /* StarTychCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABE2F80F23F1E4AC00DB608E /* StarTychCore */; };
+		ABAF09EB24297E5A00DCD93A /* StarTychCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABAF09EA24297E5A00DCD93A /* StarTychCore */; };
+		ABB4ADE024297F50008D3D07 /* StarTychCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABB4ADDF24297F50008D3D07 /* StarTychCore */; };
 		ABE2F81823F1F1FB00DB608E /* StarTychCliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE2F81723F1F1FB00DB608E /* StarTychCliTests.swift */; };
-		ABE2F82123F1F44600DB608E /* StarTychCore in Frameworks */ = {isa = PBXBuildFile; productRef = ABE2F82023F1F44600DB608E /* StarTychCore */; };
 		ABE2F82223F1F9B400DB608E /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE2F81D23F1F22200DB608E /* TestAssets.xcassets */; };
 		ABF7F98B23DCBFC300AB7E02 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7F98A23DCBFC300AB7E02 /* main.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE2F82123F1F44600DB608E /* StarTychCore in Frameworks */,
+				ABB4ADE024297F50008D3D07 /* StarTychCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE2F81023F1E4AC00DB608E /* StarTychCore in Frameworks */,
+				ABAF09EB24297E5A00DCD93A /* StarTychCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 			);
 			name = StarTychCliTests;
 			packageProductDependencies = (
-				ABE2F82023F1F44600DB608E /* StarTychCore */,
+				ABB4ADDF24297F50008D3D07 /* StarTychCore */,
 			);
 			productName = StarTychCliTests;
 			productReference = ABE2F81523F1F1FB00DB608E /* StarTychCliTests.xctest */;
@@ -140,7 +140,7 @@
 			);
 			name = StarTychCli;
 			packageProductDependencies = (
-				ABE2F80F23F1E4AC00DB608E /* StarTychCore */,
+				ABAF09EA24297E5A00DCD93A /* StarTychCore */,
 			);
 			productName = StarTychCli;
 			productReference = ABF7F98723DCBFC300AB7E02 /* StarTychCli */;
@@ -174,7 +174,7 @@
 			);
 			mainGroup = ABF7F97E23DCBFC300AB7E02;
 			packageReferences = (
-				ABE2F80E23F1E4AC00DB608E /* XCRemoteSwiftPackageReference "StarTychCore" */,
+				ABAF09E924297E5A00DCD93A /* XCRemoteSwiftPackageReference "StarTychCore" */,
 			);
 			productRefGroup = ABF7F98823DCBFC300AB7E02 /* Products */;
 			projectDirPath = "";
@@ -423,9 +423,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ABE2F80E23F1E4AC00DB608E /* XCRemoteSwiftPackageReference "StarTychCore" */ = {
+		ABAF09E924297E5A00DCD93A /* XCRemoteSwiftPackageReference "StarTychCore" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "file:///Users/jonathan/Documents/Sources/StarTychCore";
+			repositoryURL = "git@github.com:jonathanboom/StarTychCore.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -434,14 +434,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ABE2F80F23F1E4AC00DB608E /* StarTychCore */ = {
+		ABAF09EA24297E5A00DCD93A /* StarTychCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ABE2F80E23F1E4AC00DB608E /* XCRemoteSwiftPackageReference "StarTychCore" */;
+			package = ABAF09E924297E5A00DCD93A /* XCRemoteSwiftPackageReference "StarTychCore" */;
 			productName = StarTychCore;
 		};
-		ABE2F82023F1F44600DB608E /* StarTychCore */ = {
+		ABB4ADDF24297F50008D3D07 /* StarTychCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ABE2F80E23F1E4AC00DB608E /* XCRemoteSwiftPackageReference "StarTychCore" */;
+			package = ABAF09E924297E5A00DCD93A /* XCRemoteSwiftPackageReference "StarTychCore" */;
 			productName = StarTychCore;
 		};
 /* End XCSwiftPackageProductDependency section */

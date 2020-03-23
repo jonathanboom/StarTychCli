@@ -3,10 +3,10 @@
     "pins": [
       {
         "package": "StarTychCore",
-        "repositoryURL": "/Users/jonathan/Documents/Sources/StarTychCore",
+        "repositoryURL": "git@github.com:jonathanboom/StarTychCore.git",
         "state": {
           "branch": "master",
-          "revision": "4cae619bd54cbf75ff207d95c668945f80155ab8",
+          "revision": "00c65468126234e4baacf75369bbb04ea96f4174",
           "version": null
         }
       }
