@@ -27,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ABAF09E7242979D600DCD93A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		ABAF09E8242979E900DCD93A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ABE2F81523F1F1FB00DB608E /* StarTychCliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarTychCliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE2F81723F1F1FB00DB608E /* StarTychCliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTychCliTests.swift; sourceTree = "<group>"; };
 		ABE2F81923F1F1FB00DB608E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +77,8 @@
 		ABF7F97E23DCBFC300AB7E02 = {
 			isa = PBXGroup;
 			children = (
+				ABAF09E8242979E900DCD93A /* README.md */,
+				ABAF09E7242979D600DCD93A /* LICENSE */,
 				ABF7F98923DCBFC300AB7E02 /* StarTychCli */,
 				ABE2F81623F1F1FB00DB608E /* StarTychCliTests */,
 				ABF7F98823DCBFC300AB7E02 /* Products */,

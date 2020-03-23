@@ -1,9 +1,8 @@
 //
-//  StarTychCliTests.swift
-//  StarTychCliTests
+// Copyright (c) 2020, Jonathan Lynch
 //
-//  Created by Jonathan Lynch on 2/10/20.
-//  Copyright © 2020 Intuitive Soup. All rights reserved.
+// This source code is licensed under the BSD 3-Clause License license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import AppKit
@@ -125,6 +124,23 @@ class StarTychCliTests: XCTestCase {
                     starTych?.outerBorderWeight = borderWeight
                     starTych?.innerBorderWeight = borderWeight
                     let image = starTych?.makeImage(in: size)
+                    XCTAssertNotNil(image)
+                    XCTAssertLessThanOrEqual(CGFloat(image!.width), size.width)
+                    XCTAssertLessThanOrEqual(CGFloat(image!.height), size.height)
+                }
+            }
+        }
+    }
+    
+    func testPerformanceMakeImageLowInterpolation() {
+        XCTAssertNotNil(starTych?.makeImage())
+        measure {
+            for size in sizes {
+                for i in 1...50 {
+                    let borderWeight = Float(i) / 200.0
+                    starTych?.outerBorderWeight = borderWeight
+                    starTych?.innerBorderWeight = borderWeight
+                    let image = starTych?.makeImage(in: size, interpolationQuality: .low)
                     XCTAssertNotNil(image)
                     XCTAssertLessThanOrEqual(CGFloat(image!.width), size.width)
                     XCTAssertLessThanOrEqual(CGFloat(image!.height), size.height)

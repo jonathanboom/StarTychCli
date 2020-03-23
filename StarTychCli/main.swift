@@ -1,9 +1,8 @@
 //
-//  main.swift
-//  StarTychCli
+// Copyright (c) 2020, Jonathan Lynch
 //
-//  Created by Jonathan Lynch on 1/25/20.
-//  Copyright © 2020 Intuitive Soup. All rights reserved.
+// This source code is licensed under the BSD 3-Clause License license found in the
+// LICENSE file in the root directory of this source tree.
 //
 
 import Foundation
@@ -31,7 +30,7 @@ func hexCodeToColor(_ hexCode: String) -> CGColor? {
 }
 
 if CommandLine.arguments.count < 4 {
-    print("\(CommandLine.arguments[0]) output color image-path [second-image-path ...]")
+    print("\(CommandLine.arguments[0]) output-path color-hex-code image-path [second-image-path ...]")
     exit(0)
 }
 
@@ -56,7 +55,7 @@ if let color = hexCodeToColor(colorArg) {
     if let averageColor = tych.averageColor {
         tych.borderColor = averageColor
     } else {
-        print("Couldn't compute average color, just using whatever")
+        print("Couldn't compute average color, just using default")
     }
 }
 
