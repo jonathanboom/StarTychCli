@@ -153,7 +153,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Intuitive Soup";
 				TargetAttributes = {
 					ABE2F81423F1F1FB00DB608E = {
@@ -371,6 +371,7 @@
 		ABF7F98F23DCBFC300AB7E02 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8FWY2A5G5;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -382,6 +383,7 @@
 		ABF7F99023DCBFC300AB7E02 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8FWY2A5G5;
 				ENABLE_HARDENED_RUNTIME = YES;
